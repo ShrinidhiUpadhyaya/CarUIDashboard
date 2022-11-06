@@ -1,15 +1,35 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>qml/components/Fonts/NexaBold.otf</file>
-        <file>qml/components/AppThemes.qml</file>
-        <file>qml/components/singleComponents/DText.qml</file>
-        <file>qml/fonts/NexaBold.otf</file>
         <file>qml/screenManager/AppScreen.qml</file>
         <file>qml/screenManager/DModels.qml</file>
         <file>qml/screenManager/HomeScreen.qml</file>
-        <file>qml/icons/carLight.png</file>
+        <file>qml/screenManager/SettingsScreen.qml</file>
+        <file>qml/screenManager/QuickControlsScreen.qml</file>
+        <file>qml/screenManager/DSettingScreen.qml</file>
+        <file>qml/fonts/NexaBold.otf</file>
+        <file>qml/components/singleComponents/DText.qml</file>
+        <file>qml/components/singleComponents/DSlider.qml</file>
+        <file>qml/components/singleComponents/DCard.qml</file>
+        <file>qml/components/singleComponents/DCircularButton.qml</file>
+        <file>qml/components/singleComponents/DIconButton.qml</file>
+        <file>qml/components/singleComponents/DTitleCircularButton.qml</file>
+        <file>qml/components/singleComponents/DIconAnimButton.qml</file>
+        <file>qml/components/singleComponents/DSpinBox.qml</file>
+        <file>qml/components/singleComponents/DIconTextCard.qml</file>
+        <file>qml/components/singleComponents/DRect.qml</file>
+        <file>qml/components/singleComponents/DTextButton.qml</file>
+        <file>qml/components/singleComponents/DIconTextButton.qml</file>
+        <file>qml/components/AppThemes.qml</file>
         <file>qml/components/DNavigationButton.qml</file>
+        <file>qml/components/DTextRowButtons.qml</file>
+        <file>qml/components/DRowIconText.qml</file>
+        <file>qml/components/DTitleCircularButtons.qml</file>
+        <file>qml/components/DRowButtons.qml</file>
+        <file>qml/components/DACComponent.qml</file>
+        <file>qml/components/DIconTextCards.qml</file>
+        <file>qml/components/DTextButtons.qml</file>
+        <file>qml/icons/carLight.png</file>
         <file>qml/icons/bottomNavCarIcon.png</file>
         <file>qml/icons/bottomNavCarSelectedIcon.png</file>
         <file>qml/icons/bottomNavLocationIcon.png</file>
@@ -20,7 +40,6 @@
         <file>qml/icons/bottomNavMusicSelectedIcon.png</file>
         <file>qml/icons/bottomNavApplicationsIcon.png</file>
         <file>qml/icons/bottomNavApplicationsSelectedIcon.png</file>
-        <file>qml/components/DTextRowButtons.qml</file>
         <file>qml/icons/mainCarImage.png</file>
         <file>qml/icons/acIcon1.png</file>
         <file>qml/icons/acIcon2.png</file>
@@ -30,8 +49,18 @@
         <file>qml/icons/cellularIcon.png</file>
         <file>qml/icons/userIcon.png</file>
         <file>qml/icons/mainCarImage2.png</file>
-        <file>qml/screenManager/SettingsScreen.qml</file>
-        <file>qml/components/DIconTextButton.qml</file>
+        <file>qml/icons/closeIcon.png</file>
+        <file>qml/icons/interiorLight.png</file>
+        <file>qml/icons/steeringWheel.png</file>
+        <file>qml/icons/carLightReverseIcon.png</file>
+        <file>qml/icons/settingsIcon.png</file>
+        <file>qml/icons/map.png</file>
+        <file>qml/icons/upArrowIcon.png</file>
+        <file>qml/icons/navigationIcon.png</file>
+        <file>qml/icons/mapNavigationClockIcon.png</file>
+        <file>qml/icons/mapNavigationIcon.png</file>
+        <file>qml/icons/mapNavigationSandTimerIcon.png</file>
+        <file>qml/icons/mapNavigationLeftTurnIcon.png</file>
         <file>qml/icons/settingsIcon/autopilotIcon.png</file>
         <file>qml/icons/settingsIcon/bluetoothIcon.png</file>
         <file>qml/icons/settingsIcon/displayIcon.png</file>
@@ -41,35 +70,5 @@
         <file>qml/icons/settingsIcon/safetySecurityIcon.png</file>
         <file>qml/icons/settingsIcon/serviceIcon.png</file>
         <file>qml/icons/settingsIcon/userAccountIcon.png</file>
-        <file>qml/screenManager/QuickControlsScreen.qml</file>
-        <file>qml/screenManager/DSettingScreen.qml</file>
-        <file>qml/icons/closeIcon.png</file>
-        <file>qml/components/singleComponents/DSlider.qml</file>
-        <file>qml/components/singleComponents/DCard.qml</file>
-        <file>qml/components/DButton.qml</file>
-        <file>qml/icons/interiorLight.png</file>
-        <file>qml/components/DRowIconText.qml</file>
-        <file>qml/icons/steeringWheel.png</file>
-        <file>qml/components/singleComponents/DCircularButton.qml</file>
-        <file>qml/components/singleComponents/DIconButton.qml</file>
-        <file>qml/components/singleComponents/DTitleCircularButton.qml</file>
-        <file>qml/components/DTitleCircularButtons.qml</file>
-        <file>qml/icons/carLightReverseIcon.png</file>
-        <file>qml/components/singleComponents/DIconAnimButton.qml</file>
-        <file>qml/icons/settingsIcon.png</file>
-        <file>qml/icons/map.png</file>
-        <file>qml/components/DRowButtons.qml</file>
-        <file>qml/components/singleComponents/DSpinBox.qml</file>
-        <file>qml/icons/upArrowIcon.png</file>
-        <file>qml/components/DTextButtons.qml</file>
-        <file>qml/icons/navigationIcon.png</file>
-        <file>qml/components/singleComponents/DIconTextCard.qml</file>
-        <file>qml/components/DIconTextCards.qml</file>
-        <file>qml/icons/mapNavigationClockIcon.png</file>
-        <file>qml/icons/mapNavigationIcon.png</file>
-        <file>qml/icons/mapNavigationSandTimerIcon.png</file>
-        <file>qml/icons/mapNavigationLeftTurnIcon.png</file>
-        <file>qml/components/singleComponents/DRect.qml</file>
-        <file>qml/components/DACComponent.qml</file>
     </qresource>
 </RCC>

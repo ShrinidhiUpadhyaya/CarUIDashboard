@@ -6,7 +6,7 @@ import QtQuick.Window 2.12
 Item {
     id: root
 
-    readonly property real dpi: Screen.pixelDensity*25.4
+    property string fontFamilyType: fontType.name
 
     property string screenColor: "#1B1F2D"
     property string primaryButtonColor: "#2E3542"
@@ -18,8 +18,7 @@ Item {
     property string settingsOptionsBackground: "#1A1E2C"
     property string settingsBackground: "#202734"
     property string dividerColor: "#343B48"
-
-    property string fontFamilyType: fontType.name
+    property string settingsOptionsListBackgroundColor: "#2F3643"
 
     property real screenMargin: 16
     property real primaryPadding: 32
@@ -34,21 +33,17 @@ Item {
     property real smallIconSize: 12
     property real smallFontSize: 12
     property real topBarIconSize: 16
+    property real primaryScale: 1
+    property real pressedScale: 1.4
 
     property int simpleAnimationDuration: 200
     property int screenTransistionDuration: 500
     property int activeBorderWidth: 3
-    property real primaryScale: 1
-    property real pressedScale: 1.4
 
     FontLoader {
         id: fontType
 
         source: "../fonts/NexaBold.otf"
-    }
-
-    function setSize(x) {
-        return x*(dpi/80);
     }
 
     function setIconSource(source) {

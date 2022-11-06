@@ -15,7 +15,7 @@ DRect {
 
     radius: AppThemes.primaryRadius
     color: AppThemes.primaryButtonColor
-    border.color: root.activeFocus ? "#FBAF3E" : AppThemes.transparentColor
+    border.color: root.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
     border.width: root.activeFocus ? AppThemes.activeBorderWidth : 0
 
     ColumnLayout {

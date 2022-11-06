@@ -31,7 +31,7 @@ DSettingScreen {
                             Layout.alignment: Qt.AlignTop
                         }
 
-                        DButton {
+                        DTextButton {
                             Layout.fillHeight: false
                             Layout.fillWidth: false
                             Layout.preferredHeight: AppThemes.primaryButtonSize

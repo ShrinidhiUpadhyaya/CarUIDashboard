@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
 
-import "../components/singleComponents"
+import "../../components"
 
 DRect {
     id: root
@@ -13,7 +13,7 @@ DRect {
     implicitWidth: AppThemes.primaryButtonSize
     implicitHeight: AppThemes.primaryButtonSize
     radius: AppThemes.primaryRadius
-    color: "#2F3643"
+    color: AppThemes.settingsOptionsListBackgroundColor
     border.color: root.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
     border.width: root.activeFocus ? AppThemes.activeBorderWidth : 0
 
