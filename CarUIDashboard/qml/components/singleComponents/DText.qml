@@ -1,13 +1,15 @@
 import QtQuick 2.12
 
+import "../../components"
 
 Text {
     id: root
 
+    color: AppThemes.whiteColor
+
     font.bold: false
     font.family: AppThemes.fontFamilyType
-
-    color: AppThemes.whiteColor
+    font.pixelSize: AppThemes.primaryFontSize
 
     Behavior on scale {
         SmoothedAnimation { duration: AppThemes.simpleAnimationDuration }

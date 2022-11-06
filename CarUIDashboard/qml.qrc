@@ -3,7 +3,7 @@
         <file>main.qml</file>
         <file>qml/components/Fonts/NexaBold.otf</file>
         <file>qml/components/AppThemes.qml</file>
-        <file>qml/components/DText.qml</file>
+        <file>qml/components/singleComponents/DText.qml</file>
         <file>qml/fonts/NexaBold.otf</file>
         <file>qml/screenManager/AppScreen.qml</file>
         <file>qml/screenManager/DModels.qml</file>
@@ -44,8 +44,8 @@
         <file>qml/screenManager/QuickControlsScreen.qml</file>
         <file>qml/screenManager/DSettingScreen.qml</file>
         <file>qml/icons/closeIcon.png</file>
-        <file>qml/components/DSlider.qml</file>
-        <file>qml/components/DCard.qml</file>
+        <file>qml/components/singleComponents/DSlider.qml</file>
+        <file>qml/components/singleComponents/DCard.qml</file>
         <file>qml/components/DButton.qml</file>
         <file>qml/icons/interiorLight.png</file>
         <file>qml/components/DRowIconText.qml</file>
@@ -57,5 +57,18 @@
         <file>qml/icons/carLightReverseIcon.png</file>
         <file>qml/components/singleComponents/DIconAnimButton.qml</file>
         <file>qml/icons/settingsIcon.png</file>
+        <file>qml/icons/map.png</file>
+        <file>qml/components/DRowButtons.qml</file>
+        <file>qml/components/singleComponents/DSpinBox.qml</file>
+        <file>qml/icons/upArrowIcon.png</file>
+        <file>qml/components/DTextButtons.qml</file>
+        <file>qml/icons/navigationIcon.png</file>
+        <file>qml/components/singleComponents/DIconTextCard.qml</file>
+        <file>qml/components/DIconTextCards.qml</file>
+        <file>qml/icons/mapNavigationClockIcon.png</file>
+        <file>qml/icons/mapNavigationIcon.png</file>
+        <file>qml/icons/mapNavigationSandTimerIcon.png</file>
+        <file>qml/icons/mapNavigationLeftTurnIcon.png</file>
+        <file>qml/components/singleComponents/DRect.qml</file>
     </qresource>
 </RCC>

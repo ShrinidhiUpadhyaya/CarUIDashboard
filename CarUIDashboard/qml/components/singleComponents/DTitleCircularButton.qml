@@ -18,8 +18,8 @@ Item {
 
             Layout.fillWidth: true
             Layout.fillHeight: false
-            Layout.preferredHeight: 22
-            color: "white"
+            Layout.preferredHeight: AppThemes.primaryIconSize
+            color: AppThemes.whiteColor
             horizontalAlignment: Text.AlignHCenter
         }
 

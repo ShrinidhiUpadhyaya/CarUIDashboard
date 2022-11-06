@@ -8,10 +8,12 @@ Rectangle {
     id: root
 
     property alias model: repeater.model
+    property alias rows: buttonLayout.rows
+    property alias columns: buttonLayout.columns
 
-    property int currentIndex: 0
+    property real fontSize: AppThemes.largeFontSize
 
-    color: AppThemes.primaryButtonColor
+    color: "#343B48" //AppThemes.primaryButtonColor
     radius: AppThemes.primaryRadius
 
     Rectangle {
@@ -28,12 +30,14 @@ Rectangle {
         maskSource: mask
     }
 
-    RowLayout {
+    GridLayout {
         id: buttonLayout
 
         anchors.fill: parent
-        spacing: 0
         opacity: 0
+        rows: 1
+        columns: 2
+        rowSpacing: 2
 
         Repeater {
             id: repeater
@@ -44,11 +48,10 @@ Rectangle {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
 
-                color: root.currentIndex === index ? AppThemes.primaryClickedColor : AppThemes.primaryButtonColor
-                radius: AppThemes.primaryRadius
+                color: AppThemes.primaryButtonColor
                 border.color: buttonRect.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
                 border.width: buttonRect.activeFocus ? AppThemes.activeBorderWidth : 0
-                activeFocusOnTab: true
+                radius: AppThemes.primaryRadius
 
                 Behavior on color {
                     ColorAnimation {
@@ -57,13 +60,19 @@ Rectangle {
                 }
 
                 DText {
+                    id: text
+
                     text: model.text
                     anchors.centerIn: parent
                     color: AppThemes.whiteColor
-                }
+                    font.pixelSize: root.fontSize
+                    scale: buttonRect.pressed ? 1.4 : 1
 
-                onClicked: {
-                    root.currentIndex = index;
+                    Behavior on scale {
+                        NumberAnimation {
+                            duration: AppThemes.simpleAnimationDuration
+                        }
+                    }
                 }
             }
         }

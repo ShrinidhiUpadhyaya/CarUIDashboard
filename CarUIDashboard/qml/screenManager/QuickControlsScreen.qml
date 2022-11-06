@@ -3,13 +3,12 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
 
 import "../components"
-
 import "../components/singleComponents"
 
 DSettingScreen {
     width: parent.width
     height: parent.height
-    title: "Quick Controls"
+    title: qsTr("Quick Controls")
 
     content: [
         ColumnLayout {
@@ -18,16 +17,16 @@ DSettingScreen {
             DCard {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                iconSource: "qrc:/qml/icons/settingsIcon/quickControlsIcon.png"
-                title: "Display Brightness"
+                iconSource: AppThemes.setIconSource("settingsIcon/quickControlsIcon.png")
+                title: qsTr("Display Brightness")
                 content:[
                     RowLayout {
                         anchors.fill: parent
-                        spacing: 16
+                        spacing: AppThemes.primarySpacing
 
                         DSlider {
                             Layout.fillHeight: false
-                            Layout.preferredHeight: 40
+                            Layout.preferredHeight: AppThemes.primaryButtonSize
                             Layout.fillWidth: true
                             Layout.alignment: Qt.AlignTop
                         }
@@ -35,7 +34,7 @@ DSettingScreen {
                         DButton {
                             Layout.fillHeight: false
                             Layout.fillWidth: false
-                            Layout.preferredHeight: 40
+                            Layout.preferredHeight: AppThemes.primaryButtonSize
                             Layout.preferredWidth: parent.width * 0.15
                             Layout.alignment: Qt.AlignTop
                         }
@@ -46,12 +45,12 @@ DSettingScreen {
             DCard {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                title: "Exterior Lights"
-                iconSource: "qrc:/qml/icons/carLight.png"
+                title: qsTr("Exterior Lights")
+                iconSource: AppThemes.setIconSource("carLight.png")
                 content: [
                     DTextRowButtons {
                         width: parent.width
-                        height: 40
+                        height: AppThemes.primaryButtonSize
                         model: DModels.quickControlsLightList
                     }
                 ]
@@ -75,12 +74,12 @@ DSettingScreen {
             DCard {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                title: "Interior Lights"
-                iconSource: "qrc:/qml/icons/interiorLight.png"
+                title: qsTr("Interior Lights")
+                iconSource: AppThemes.setIconSource("interiorLight.png")
                 content: [
                     DTextRowButtons {
                         width: parent.width
-                        height: 40
+                        height: AppThemes.primaryButtonSize
                         model: DModels.quickControlsInteriorLightList
                     }
                 ]
@@ -89,17 +88,16 @@ DSettingScreen {
             DCard {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                title: "Steering Wheel"
-                iconSource: "qrc:/qml/icons/steeringWheel.png"
+                title: qsTr("Steering Wheel")
+                iconSource: AppThemes.setIconSource("steeringWheel.png")
                 content: [
                     DTextRowButtons {
                         width: parent.width
-                        height: 40
+                        height: AppThemes.primaryButtonSize
                         model: DModels.quickControlsSteeringWheelList
                     }
                 ]
             }
         }
-
     ]
 }

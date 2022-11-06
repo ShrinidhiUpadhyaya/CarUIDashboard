@@ -10,7 +10,6 @@ Item {
     property alias title: title.text
     property alias content: content.data
 
-
     ColumnLayout {
         anchors.fill: parent
 
@@ -18,7 +17,7 @@ Item {
             Layout.fillHeight: false
             Layout.preferredHeight: parent.height * 0.1
             Layout.fillWidth: true
-            color: "transparent"
+            color: AppThemes.transparentColor
 
             RowLayout {
                 anchors.fill: parent
@@ -29,8 +28,8 @@ Item {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     verticalAlignment: Text.AlignVCenter
-                    color: "white"
-                    font.pixelSize: 32
+                    color: AppThemes.whiteColor
+                    font.pixelSize: AppThemes.largeFontSize
                 }
             }
         }
@@ -40,7 +39,7 @@ Item {
 
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "transparent"
+            color: AppThemes.transparentColor
         }
     }
 }

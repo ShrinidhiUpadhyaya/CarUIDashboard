@@ -2,25 +2,24 @@ import QtQuick 2.12
 
 import "../../components"
 
-Rectangle {
+DRect {
     id: root
 
     property alias source1: image1.source
     property alias source2: image2.source
-//    property alias iconSize: image.width
     property bool buttonEnabled: false
 
-    signal clicked()
-
     color: AppThemes.primaryButtonColor
+    border.color: root.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
+    border.width: root.activeFocus ? AppThemes.activeBorderWidth : 0
 
-    radius: 12
+    radius: AppThemes.primaryRadius
     clip: true
 
     Image {
         id: image1
 
-        width: 32
+        width: AppThemes.largeIconSize
         height: width
         x: root.buttonEnabled ? -width : (root.width / 2) -  (width / 2)
         anchors.verticalCenter: parent.verticalCenter
@@ -40,7 +39,7 @@ Rectangle {
     Image {
         id: image2
 
-        width: 32
+        width: AppThemes.largeIconSize
         height: width
         x: root.buttonEnabled ? (parent.width / 2) -  (width / 2) : root.width
         anchors.verticalCenter: parent.verticalCenter
@@ -49,20 +48,15 @@ Rectangle {
         mipmap: true
 
         Behavior on x {
-            NumberAnimation { duration: 500; easing.type: Easing.InQuint}
+            NumberAnimation { duration: AppThemes.screenTransistionDuration; easing.type: Easing.InQuint }
         }
 
         Behavior on opacity {
-            NumberAnimation { duration: 500;easing.type: Easing.InQuint }
+            NumberAnimation { duration: AppThemes.screenTransistionDuration; easing.type: Easing.InQuint }
         }
     }
 
-    MouseArea {
-        anchors.fill: parent
-
-        onClicked: {
-            root.buttonEnabled = !root.buttonEnabled
-            root.clicked()
-        }
+    onClicked: {
+        root.buttonEnabled = !root.buttonEnabled;
     }
 }

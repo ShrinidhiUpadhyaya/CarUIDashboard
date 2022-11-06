@@ -8,11 +8,9 @@ AppScreen {
     id: root
 
     onActiveFocusChanged: {
-        console.log("ActiveFocus")
-
         if(activeFocus) {
             settingsOptionsRect.state = "reanchored"
-            myRect.state = "reanchored"
+//            settingsRect.state = "reanchored"
         }
     }
 
@@ -20,6 +18,7 @@ AppScreen {
 
         Item {
             anchors.fill: parent
+
             Rectangle {
                 id: settingsOptionsRect
                 height: parent.height
@@ -36,6 +35,7 @@ AppScreen {
                         target: settingsOptionsRect
                         anchors.left: parent.left
                     }
+
                     PropertyChanges {
                         target: settingsOptionsRect
                         anchors.leftMargin: 0
@@ -43,25 +43,25 @@ AppScreen {
                 }
 
                 transitions: Transition {
-                    AnchorAnimation { duration: 1000;easing.type: Easing.InOutQuad;}
+                    AnchorAnimation { duration: 1000;}
                 }
 
                 ListView {
                     id: settingsListView
 
-                    width: parent.width - 32
-                    height: 48 * DModels.settingsIconList.count
+                    width: parent.width - AppThemes.primaryPadding
+                    height: AppThemes.primaryButtonSize * DModels.settingsIconList.count
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: 32
+                    anchors.topMargin: AppThemes.primaryPadding
                     model: DModels.settingsIconList
 
                     delegate: DIconTextButton {
                         width: parent.width
-                        height: 48
+                        height: AppThemes.primaryButtonSize
                         source: model.source
                         text: model.text
-                        color: index === settingsListView.currentIndex ? "#2F3643" : "transparent"
+                        color: index === settingsListView.currentIndex ? AppThemes.primaryButtonColor : AppThemes.transparentColor
 
                         onClicked: {
                             settingsListView.currentIndex = index;
@@ -70,50 +70,50 @@ AppScreen {
                 }
             }
 
-            Rectangle {
-                id: myRect
+//            Rectangle {
+//                id: settingsRect
 
-                height: parent.height
-                anchors.left: parent.left
-                anchors.leftMargin: parent.width
-                width: root.width - settingsOptionsRect.width
-                color: "#202734"
+//                height: parent.height
+//                anchors.left: parent.left
+//                anchors.leftMargin: parent.width
+//                width: root.width - settingsOptionsRect.width
+//                color: "#202734"
 
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        myRect.state = "reanchored"
-                    }
-                }
+//                MouseArea {
+//                    anchors.fill: parent
+//                    onClicked: {
+//                        settingsRect.state = "reanchored"
+//                    }
+//                }
 
-                states: State {
-                    name: "reanchored"
+//                states: State {
+//                    name: "reanchored"
 
-                    AnchorChanges {
-                        target: myRect
-                        anchors.left: parent.left
-                    }
-                    PropertyChanges {
-                        target: myRect
-                        anchors.leftMargin: settingsOptionsRect.width
-                    }
-                }
+//                    AnchorChanges {
+//                        target: settingsRect
+//                        anchors.left: parent.left
+//                    }
+//                    PropertyChanges {
+//                        target: settingsRect
+//                        anchors.leftMargin: settingsOptionsRect.width
+//                    }
+//                }
 
-                transitions: Transition {
-                    AnchorAnimation { duration: 1100;easing.type: Easing.InOutQuad }
-                }
+//                transitions: Transition {
+//                    AnchorAnimation { duration: 1100;}
+//                }
 
-                Item {
-                    width: parent.width -32
-                    height: parent.height -32
-                    anchors.centerIn: parent
+//                Item {
+//                    width: parent.width - AppThemes.primaryPadding
+//                    height: parent.height - AppThemes.primaryPadding
+//                    anchors.centerIn: parent
 
-                    QuickControlsScreen {
-                        anchors.fill: parent
-                    }
-                }
-            }
+//                    QuickControlsScreen {
+//                        anchors.fill: parent
+//                    }
+//                }
+//            }
+
         }
-
     ]
 }

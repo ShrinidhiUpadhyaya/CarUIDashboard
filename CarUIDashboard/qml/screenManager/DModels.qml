@@ -12,7 +12,8 @@ Item {
     property alias quickControlsInteriorLightList: quickControlsInteriorLightList
     property alias quickControlsSteeringWheelList: quickControlsSteeringWheelList
     property alias quickControlsFogModelList: quickControlsFogModelList
-
+    property alias mapZoomButtons: mapZoomButtons
+    property alias mapNavDataModelList: mapNavDataModelList
 
     ListModel {
         id: bottomNavigationIconList
@@ -140,6 +141,40 @@ Item {
         ListElement {
             text: "Back Fog"
             source:"qrc:/qml/icons/carLightReverseIcon.png"
+        }
+    }
+
+    ListModel {
+        id: mapZoomButtons
+
+        ListElement {
+            text:"+"
+        }
+
+        ListElement {
+            text:"-"
+        }
+    }
+
+    ListModel {
+        id: mapNavDataModelList
+
+        ListElement {
+            source: "qrc:/qml/icons/mapNavigationIcon.png"
+            text1: "distance"
+            text2: "3.5 KM"
+        }
+
+        ListElement {
+            source: "qrc:/qml/icons/mapNavigationSandTimerIcon.png"
+            text1: "time left"
+            text2: "12 Min"
+        }
+
+        ListElement {
+            source: "qrc:/qml/icons/mapNavigationClockIcon.png"
+            text1: "arrival time"
+            text2: "09:52 PM"
         }
     }
 }

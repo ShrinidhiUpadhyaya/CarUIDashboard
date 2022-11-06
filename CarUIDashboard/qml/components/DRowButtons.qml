@@ -2,8 +2,6 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
 
-import "../components/singleComponents"
-
 Rectangle {
     id: root
 
@@ -38,17 +36,14 @@ Rectangle {
         Repeater {
             id: repeater
 
-            DRect {
+            Rectangle {
                 id: buttonRect
 
                 Layout.fillHeight: true
                 Layout.fillWidth: true
 
-                color: root.currentIndex === index ? AppThemes.primaryClickedColor : AppThemes.primaryButtonColor
+                color: AppThemes.primaryButtonColor
                 radius: AppThemes.primaryRadius
-                border.color: buttonRect.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
-                border.width: buttonRect.activeFocus ? AppThemes.activeBorderWidth : 0
-                activeFocusOnTab: true
 
                 Behavior on color {
                     ColorAnimation {
@@ -56,14 +51,17 @@ Rectangle {
                     }
                 }
 
-                DText {
-                    text: model.text
-                    anchors.centerIn: parent
-                    color: AppThemes.whiteColor
+                Loader {
+                    anchors.fill: parent
+                    sourceComponent: model.component
                 }
 
-                onClicked: {
-                    root.currentIndex = index;
+                MouseArea {
+                    anchors.fill: parent
+
+                    onClicked: {
+                        root.currentIndex = index
+                    }
                 }
             }
         }

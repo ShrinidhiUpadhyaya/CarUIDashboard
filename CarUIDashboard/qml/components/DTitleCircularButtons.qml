@@ -4,7 +4,6 @@ import QtGraphicalEffects 1.12
 
 import "../components/singleComponents"
 
-
 Item {
     id: root
 

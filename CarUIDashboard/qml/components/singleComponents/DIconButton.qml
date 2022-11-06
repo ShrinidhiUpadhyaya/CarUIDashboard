@@ -2,41 +2,36 @@ import QtQuick 2.12
 
 import "../../components"
 
-Rectangle {
+DRect {
     id: root
 
     property alias source: image.source
     property alias iconSize: image.width
+
     property bool buttonEnabled: false
 
-    signal clicked()
-
     color: root.buttonEnabled ? AppThemes.primaryClickedColor : AppThemes.primaryButtonColor
+    border.color: root.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
+    border.width: root.activeFocus ? AppThemes.activeBorderWidth : 0
+    radius: AppThemes.primaryRadius
 
     Behavior on color {
         ColorAnimation {
-            duration: 200
+            duration: AppThemes.simpleAnimationDuration
         }
     }
-
-    radius: 12
 
     Image {
         id: image
 
-        width: 32
+        width: AppThemes.largeIconSize
         height: width
         anchors.centerIn: parent
         fillMode: Image.PreserveAspectFit
         mipmap: true
     }
 
-    MouseArea {
-        anchors.fill: parent
-
-        onClicked: {
-            root.buttonEnabled = !root.buttonEnabled
-            root.clicked()
-        }
+    onClicked: {
+        root.buttonEnabled = !root.buttonEnabled
     }
 }

@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
 
+import "../components/singleComponents"
+
 Rectangle {
     id: root
 
@@ -8,22 +10,22 @@ Rectangle {
     property alias text: text.text
     property alias backgroundColor: root.color
 
-    implicitHeight: 48
-    implicitWidth: 48
-    radius: 12
-    color: "#2F3643"
+    implicitHeight: AppThemes.primaryButtonSize
+    implicitWidth: AppThemes.primaryButtonSize
+    radius: AppThemes.primaryRadius
+    color: AppThemes.transparentColor
 
     RowLayout {
-        width: parent.width - 32
-        height: parent.height - 16
+        width: parent.width - AppThemes.primaryPadding
+        height: parent.height - AppThemes.primarySpacing
         anchors.left: parent.left
-        spacing: 16
+        spacing: AppThemes.primarySpacing
 
         Image {
             id: image
 
             Layout.fillHeight: false
-            Layout.preferredHeight: 24
+            Layout.preferredHeight: AppThemes.primaryIconSize
             Layout.fillWidth: false
             Layout.preferredWidth: height
         }
@@ -33,9 +35,9 @@ Rectangle {
 
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "white"
+            color: AppThemes.whiteColor
             verticalAlignment: Text.AlignVCenter
-            font.pixelSize: 16
+            font.pixelSize: AppThemes.primaryIconSize
         }
     }
 }

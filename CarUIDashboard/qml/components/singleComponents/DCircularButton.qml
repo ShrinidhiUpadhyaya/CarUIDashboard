@@ -4,41 +4,36 @@ import QtGraphicalEffects 1.0
 
 import "../../components"
 
-Rectangle {
+DRect {
     id: root
 
     property alias source: icon.source
 
     property bool buttonEnabled: false
 
-    signal clicked();
-
     height: parent.height
     width: height
     radius: height / 2
     color: root.buttonEnabled ? AppThemes.primaryClickedColor : AppThemes.primaryButtonColor
+    border.color: root.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
+    border.width: root.activeFocus ? AppThemes.activeBorderWidth : 0
 
     Behavior on color {
         ColorAnimation {
-            duration: 200
+            duration: AppThemes.simpleAnimationDuration
         }
     }
 
     Image {
         id: icon
 
-        width: 32
-        height: 32
+        width: AppThemes.largeIconSize
+        height: AppThemes.largeIconSize
         anchors.centerIn: parent
     }
 
-    MouseArea {
-        anchors.fill: parent
-
-        onClicked: {
-            root.buttonEnabled = !root.buttonEnabled;
-            root.clicked();
-        }
+    onClicked: {
+        root.buttonEnabled = !root.buttonEnabled;
     }
 }
 

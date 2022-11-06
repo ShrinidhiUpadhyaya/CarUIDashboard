@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
 
-import "../components"
+import "../../components"
 
 Item {
 
@@ -20,7 +20,7 @@ Item {
             Layout.fillHeight: false
             Layout.preferredHeight: 32
 
-            color: "transparent"
+            color: AppThemes.transparentColor
         }
 
         Item {
