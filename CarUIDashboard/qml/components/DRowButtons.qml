@@ -1,69 +1,69 @@
-import QtQuick 2.12
-import QtQuick.Layouts 1.12
-import QtGraphicalEffects 1.12
-
-Rectangle {
-    id: root
-
-    property alias model: repeater.model
-
-    property int currentIndex: 0
-
-    color: AppThemes.primaryButtonColor
-    radius: AppThemes.primaryRadius
+    import QtQuick 2.12
+    import QtQuick.Layouts 1.12
+    import QtGraphicalEffects 1.12
 
     Rectangle {
-        id: mask
+        id: root
 
-        anchors.fill: parent
+        property alias model: repeater.model
+
+        property int currentIndex: 0
+
+        color: AppThemes.primaryButtonColor
         radius: AppThemes.primaryRadius
-        visible: false
-    }
 
-    OpacityMask {
-        anchors.fill: parent
-        source: buttonLayout
-        maskSource: mask
-    }
+        Rectangle {
+            id: mask
 
-    RowLayout {
-        id: buttonLayout
+            anchors.fill: parent
+            radius: AppThemes.primaryRadius
+            visible: false
+        }
 
-        anchors.fill: parent
-        spacing: 0
-        opacity: 0
+        OpacityMask {
+            anchors.fill: parent
+            source: buttonLayout
+            maskSource: mask
+        }
 
-        Repeater {
-            id: repeater
+        RowLayout {
+            id: buttonLayout
 
-            Rectangle {
-                id: buttonRect
+            anchors.fill: parent
+            spacing: 0
+            opacity: 0
 
-                Layout.fillHeight: true
-                Layout.fillWidth: true
+            Repeater {
+                id: repeater
 
-                color: AppThemes.primaryButtonColor
-                radius: AppThemes.primaryRadius
+                Rectangle {
+                    id: buttonRect
 
-                Behavior on color {
-                    ColorAnimation {
-                        duration: AppThemes.simpleAnimationDuration
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    color: AppThemes.primaryButtonColor
+                    radius: AppThemes.primaryRadius
+
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: AppThemes.simpleAnimationDuration
+                        }
                     }
-                }
 
-                Loader {
-                    anchors.fill: parent
-                    sourceComponent: model.component
-                }
+                    Loader {
+                        anchors.fill: parent
+                        sourceComponent: model.component
+                    }
 
-                MouseArea {
-                    anchors.fill: parent
+                    MouseArea {
+                        anchors.fill: parent
 
-                    onClicked: {
-                        root.currentIndex = index
+                        onClicked: {
+                            root.currentIndex = index
+                        }
                     }
                 }
             }
         }
     }
-}

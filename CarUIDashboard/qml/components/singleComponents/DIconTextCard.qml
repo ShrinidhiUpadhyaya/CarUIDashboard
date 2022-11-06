@@ -22,8 +22,8 @@ Rectangle {
         anchors.centerIn: parent
 
         Item {
-            Layout.fillHeight: true
             Layout.fillWidth: false
+            Layout.fillHeight: true
             Layout.preferredWidth: root.iconSize
 
             Image {
@@ -36,8 +36,8 @@ Rectangle {
         }
 
         Item {
-            Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.fillHeight: true
 
             ColumnLayout {
                 anchors.fill: parent
@@ -46,8 +46,8 @@ Rectangle {
                 DText {
                     id: text1
 
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     verticalAlignment: Text.AlignVCenter
                     color: AppThemes.whiteColor
                 }
@@ -55,8 +55,8 @@ Rectangle {
                 DText {
                     id: text2
 
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     verticalAlignment: Text.AlignVCenter
                     color: AppThemes.activeTextColor
                 }

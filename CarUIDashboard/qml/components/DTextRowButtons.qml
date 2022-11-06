@@ -41,8 +41,8 @@ Rectangle {
             DRect {
                 id: buttonRect
 
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 color: root.currentIndex === index ? AppThemes.primaryClickedColor : AppThemes.primaryButtonColor
                 radius: AppThemes.primaryRadius

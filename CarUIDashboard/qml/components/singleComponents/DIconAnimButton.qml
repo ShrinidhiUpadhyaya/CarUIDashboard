@@ -28,11 +28,11 @@ DRect {
         mipmap: true
 
         Behavior on x {
-            NumberAnimation { duration: 500;easing.type: Easing.InQuint}
+            NumberAnimation { duration: AppThemes.screenTransistionDuration; easing.type: Easing.InQuint}
         }
 
         Behavior on opacity {
-            NumberAnimation { duration: 500;easing.type: Easing.InQuint }
+            NumberAnimation { duration: AppThemes.screenTransistionDuration; easing.type: Easing.InQuint }
         }
     }
 

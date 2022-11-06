@@ -37,8 +37,8 @@ Item {
             DRect {
                 id: button
 
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
                 color: AppThemes.transparentColor
                 border.color: button.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
                 border.width: button.activeFocus ? AppThemes.activeBorderWidth : 0

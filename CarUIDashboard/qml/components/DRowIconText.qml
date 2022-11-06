@@ -10,8 +10,8 @@ Rectangle {
     property alias text: text.text
     property alias backgroundColor: root.color
 
-    implicitHeight: AppThemes.primaryButtonSize
     implicitWidth: AppThemes.primaryButtonSize
+    implicitHeight: AppThemes.primaryButtonSize
     radius: AppThemes.primaryRadius
     color: AppThemes.transparentColor
 
@@ -24,17 +24,18 @@ Rectangle {
         Image {
             id: image
 
-            Layout.fillHeight: false
-            Layout.preferredHeight: AppThemes.primaryIconSize
             Layout.fillWidth: false
             Layout.preferredWidth: height
+            Layout.fillHeight: false
+            Layout.preferredHeight: AppThemes.primaryIconSize
+
         }
 
         DText {
             id: text
 
-            Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.fillHeight: true
             color: AppThemes.whiteColor
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: AppThemes.primaryIconSize

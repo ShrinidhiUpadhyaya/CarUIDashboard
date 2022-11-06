@@ -13,7 +13,7 @@ Rectangle {
 
     property real fontSize: AppThemes.largeFontSize
 
-    color: "#343B48" //AppThemes.primaryButtonColor
+    color: AppThemes.dividerColor
     radius: AppThemes.primaryRadius
 
     Rectangle {
@@ -45,8 +45,8 @@ Rectangle {
             DRect {
                 id: buttonRect
 
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 color: AppThemes.primaryButtonColor
                 border.color: buttonRect.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
@@ -66,7 +66,7 @@ Rectangle {
                     anchors.centerIn: parent
                     color: AppThemes.whiteColor
                     font.pixelSize: root.fontSize
-                    scale: buttonRect.pressed ? 1.4 : 1
+                    scale: buttonRect.pressed ? AppThemes.pressedScale : AppThemes.primaryScale
 
                     Behavior on scale {
                         NumberAnimation {

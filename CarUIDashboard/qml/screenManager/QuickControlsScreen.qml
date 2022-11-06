@@ -15,8 +15,8 @@ DSettingScreen {
             anchors.fill: parent
 
             DCard {
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
                 iconSource: AppThemes.setIconSource("settingsIcon/quickControlsIcon.png")
                 title: qsTr("Display Brightness")
                 content:[
@@ -25,9 +25,9 @@ DSettingScreen {
                         spacing: AppThemes.primarySpacing
 
                         DSlider {
+                            Layout.fillWidth: true
                             Layout.fillHeight: false
                             Layout.preferredHeight: AppThemes.primaryButtonSize
-                            Layout.fillWidth: true
                             Layout.alignment: Qt.AlignTop
                         }
 
@@ -43,8 +43,8 @@ DSettingScreen {
             }
 
             DCard {
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
                 title: qsTr("Exterior Lights")
                 iconSource: AppThemes.setIconSource("carLight.png")
                 content: [
@@ -57,8 +57,8 @@ DSettingScreen {
             }
 
             Item {
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 Row {
                     anchors.fill: parent
@@ -72,8 +72,8 @@ DSettingScreen {
             }
 
             DCard {
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
                 title: qsTr("Interior Lights")
                 iconSource: AppThemes.setIconSource("interiorLight.png")
                 content: [
@@ -86,8 +86,8 @@ DSettingScreen {
             }
 
             DCard {
-                Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.fillHeight: true
                 title: qsTr("Steering Wheel")
                 iconSource: AppThemes.setIconSource("steeringWheel.png")
                 content: [

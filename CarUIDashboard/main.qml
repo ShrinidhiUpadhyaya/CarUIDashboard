@@ -11,12 +11,12 @@ Window {
     visible: true
     width: 720
     height: 900
-    maximumHeight: 900
+    minimumWidth: 720
     maximumWidth: 720
     minimumHeight: 900
-    minimumWidth: 720
-    title: qsTr("Hello World")
+    maximumHeight: 900
 
+    title: qsTr("CarUI Dashboard")
 
     Rectangle {
         anchors.fill: parent

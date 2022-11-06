@@ -4,55 +4,72 @@ import QtQuick.Layouts 1.12
 
 import "../../components"
 
-Rectangle {
+DRect {
     id: root
 
+    property int minValue: 0
+    property int maxValue: 20
     property int value: 10
+
+    property bool editable: true
 
     radius: AppThemes.primaryRadius
     color: AppThemes.primaryButtonColor
-
+    border.color: root.activeFocus ? "#FBAF3E" : AppThemes.transparentColor
+    border.width: root.activeFocus ? AppThemes.activeBorderWidth : 0
 
     ColumnLayout {
         anchors.fill: parent
 
-        Item {
-            Layout.fillHeight: true
+        DRect {
             Layout.fillWidth: true
+            Layout.fillHeight: true
+            color: AppThemes.transparentColor
+            activeFocusOnTab: false
 
             Image {
                 width: AppThemes.smallIconSize
                 height: AppThemes.smallIconSize
                 anchors.centerIn: parent
                 source: AppThemes.setIconSource("upArrowIcon.png")
+                scale: parent.pressed ? AppThemes.pressedScale : AppThemes.primaryScale
+            }
+
+            onClicked: {
+                value = Math.min(maxValue,value+1)
             }
         }
 
         Item {
-            Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.fillHeight: true
 
             TextInput {
-                    z: 2
-                    text: root.value
+                width: parent.width
+                anchors.centerIn: parent
+                z: 2
+                horizontalAlignment: Qt.AlignHCenter
+                verticalAlignment: Qt.AlignVCenter
 
-                    color: "#21be2b"
-                    selectionColor: "#21be2b"
-                    selectedTextColor: "#ffffff"
-                    horizontalAlignment: Qt.AlignHCenter
-                    verticalAlignment: Qt.AlignVCenter
-                    anchors.centerIn: parent
-                    width: parent.width
-
-                    readOnly: !root.editable
-//                    validator: root.validator
-                    inputMethodHints: Qt.ImhFormattedNumbersOnly
+                color: activeFocus ?  AppThemes.activeTextColor : AppThemes.whiteColor
+                selectionColor: AppThemes.primaryClickedColor
+                text: root.value
+                font.pixelSize: AppThemes.primaryFontSize
+                readOnly: !root.editable
+                validator: DoubleValidator {
+                    bottom: Math.min(root.minValue, root.maxValue)
+                    top:  Math.max(root.minValue, root.maxValue)
                 }
+                inputMethodHints: Qt.ImhFormattedNumbersOnly
+                font.family: AppThemes.fontFamilyType
+            }
         }
 
-        Item {
-            Layout.fillHeight: true
+        DRect {
             Layout.fillWidth: true
+            Layout.fillHeight: true
+            color: AppThemes.transparentColor
+            activeFocusOnTab: false
 
             Image {
                 width: AppThemes.smallIconSize
@@ -60,6 +77,11 @@ Rectangle {
                 anchors.centerIn: parent
                 source: AppThemes.setIconSource("upArrowIcon.png")
                 rotation: 180
+                scale: parent.pressed ? AppThemes.pressedScale : AppThemes.primaryScale
+            }
+
+            onClicked: {
+                value = Math.max(minValue,value-1)
             }
         }
     }

@@ -19,8 +19,8 @@ AppScreen {
     content:[
 
         ColumnLayout {
-            height: parent.height - AppThemes.primarySpacing
             width: parent.width
+            height: parent.height - AppThemes.primarySpacing
             anchors.centerIn: parent
             spacing: 5
 
@@ -68,8 +68,8 @@ AppScreen {
                 }
 
                 DIconTextCard {
-                    height: AppThemes.largeButtonSize
                     width: parent.width / 2.5
+                    height: AppThemes.largeButtonSize
                     source: AppThemes.setIconSource("mapNavigationLeftTurnIcon.png")
                     iconSize: AppThemes.primaryButtonSize
                     text1: qsTr("655 m")
@@ -85,9 +85,9 @@ AppScreen {
             }
 
             ColumnLayout {
-                Layout.fillHeight: true
                 Layout.fillWidth: false
                 Layout.preferredWidth: parent.width - AppThemes.primaryPadding
+                Layout.fillHeight: true
                 Layout.alignment: Qt.AlignCenter
                 spacing: AppThemes.primarySpacing
 
@@ -122,8 +122,8 @@ AppScreen {
                         spacing: 0
 
                         Item {
-                            Layout.fillHeight: true
                             Layout.fillWidth: false
+                            Layout.fillHeight: true
                             Layout.preferredWidth: parent.width * 0.2
 
                             DIconButton {
@@ -136,20 +136,20 @@ AppScreen {
                         }
 
                         Rectangle {
-                            Layout.fillHeight: true
                             Layout.fillWidth: true
+                            Layout.fillHeight: true
                             color: AppThemes.transparentColor
-                            border.color: "red"
 
-                            DSpinBox {
-                                width: 100
-                                height: 50
+                            DACComponent {
+                                width: parent.width
+                                height: AppThemes.primaryButtonSize
+                                anchors.centerIn: parent
                             }
                         }
 
                         Item {
-                            Layout.fillHeight: true
                             Layout.fillWidth: false
+                            Layout.fillHeight: true
                             Layout.preferredWidth: parent.width * 0.2
 
                             DIconButton {
@@ -175,8 +175,8 @@ AppScreen {
                         anchors.centerIn: parent
 
                         DNavigationButton {
-                            height: AppThemes.primaryButtonSize
                             width: parent.width
+                            height: AppThemes.primaryButtonSize
                             anchors.centerIn: parent
                             model: DModels.bottomNavigationIconList
                         }

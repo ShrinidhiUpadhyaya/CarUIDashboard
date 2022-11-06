@@ -14,9 +14,9 @@ Item {
         anchors.fill: parent
 
         Rectangle {
+            Layout.fillWidth: true
             Layout.fillHeight: false
             Layout.preferredHeight: parent.height * 0.1
-            Layout.fillWidth: true
             color: AppThemes.transparentColor
 
             RowLayout {
@@ -25,8 +25,8 @@ Item {
                 DText {
                     id: title
 
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     verticalAlignment: Text.AlignVCenter
                     color: AppThemes.whiteColor
                     font.pixelSize: AppThemes.largeFontSize
@@ -37,8 +37,8 @@ Item {
         Rectangle {
             id: content
 
-            Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.fillHeight: true
             color: AppThemes.transparentColor
         }
     }

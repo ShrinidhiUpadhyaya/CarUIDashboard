@@ -10,8 +10,8 @@ Item {
     property alias model: repeater.model
 
     GridLayout {
-        height: parent.height
         width: repeater.count * (height)
+        height: parent.height
         rows: 2
 
         Repeater {

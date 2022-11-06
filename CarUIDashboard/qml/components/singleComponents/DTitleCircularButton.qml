@@ -26,9 +26,9 @@ Item {
         DCircularButton {
             id: button
 
-            Layout.fillHeight: true
             Layout.fillWidth: false
             Layout.preferredWidth: height
+            Layout.fillHeight: true
             Layout.alignment: Qt.AlignHCenter
         }
     }

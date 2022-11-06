@@ -15,6 +15,9 @@ Item {
     property string whiteColor: "white"
     property string activeFocusBorderColor: "#FBAF3E"
     property string activeTextColor:"#FBAF3E"
+    property string settingsOptionsBackground: "#1A1E2C"
+    property string settingsBackground: "#202734"
+    property string dividerColor: "#343B48"
 
     property string fontFamilyType: fontType.name
 
@@ -35,6 +38,8 @@ Item {
     property int simpleAnimationDuration: 200
     property int screenTransistionDuration: 500
     property int activeBorderWidth: 3
+    property real primaryScale: 1
+    property real pressedScale: 1.4
 
     FontLoader {
         id: fontType

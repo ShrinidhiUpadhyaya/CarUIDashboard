@@ -11,8 +11,8 @@ DRect {
 
     property bool buttonEnabled: false
 
-    height: parent.height
     width: height
+    height: parent.height
     radius: height / 2
     color: root.buttonEnabled ? AppThemes.primaryClickedColor : AppThemes.primaryButtonColor
     border.color: root.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor

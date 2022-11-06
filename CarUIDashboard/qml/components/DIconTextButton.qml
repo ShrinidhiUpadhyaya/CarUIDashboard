@@ -10,8 +10,8 @@ DRect {
     property alias text: text.text
     property alias backgroundColor: root.color
 
-    implicitHeight: AppThemes.primaryButtonSize
     implicitWidth: AppThemes.primaryButtonSize
+    implicitHeight: AppThemes.primaryButtonSize
     radius: AppThemes.primaryRadius
     color: "#2F3643"
     border.color: root.activeFocus ? AppThemes.activeFocusBorderColor : AppThemes.transparentColor
@@ -32,17 +32,17 @@ DRect {
         Image {
             id: image
 
-            Layout.fillHeight: false
-            Layout.preferredHeight: AppThemes.primaryIconSize
             Layout.fillWidth: false
             Layout.preferredWidth: height
+            Layout.fillHeight: false
+            Layout.preferredHeight: AppThemes.primaryIconSize
         }
 
         DText {
             id: text
 
-            Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.fillHeight: true
             color: AppThemes.whiteColor
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: AppThemes.primaryFontSize

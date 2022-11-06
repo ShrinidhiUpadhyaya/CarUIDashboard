@@ -46,10 +46,10 @@ Item {
                 anchors.fill: parent
 
                 Item {
-                    Layout.fillHeight: false
                     Layout.fillWidth: false
-                    Layout.preferredHeight: AppThemes.topBarIconSize
                     Layout.preferredWidth: AppThemes.topBarIconSize
+                    Layout.fillHeight: false
+                    Layout.preferredHeight: AppThemes.topBarIconSize
 
                     Image {
                         anchors.fill: parent
@@ -58,8 +58,8 @@ Item {
                 }
 
                 Item {
-                    Layout.fillHeight: false
                     Layout.fillWidth: true
+                    Layout.fillHeight: false
                     Layout.preferredHeight: AppThemes.topBarIconSize
 
                     DText {
@@ -73,9 +73,9 @@ Item {
                 }
 
                 Item {
-                    Layout.fillHeight: true
                     Layout.fillWidth: false
                     Layout.preferredWidth: timeText.width + tempText.width
+                    Layout.fillHeight: true
                     Layout.alignment: Qt.AlignCenter
 
                     DText {
@@ -98,8 +98,8 @@ Item {
                 }
 
                 Item {
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
 
                     Row {
                         anchors.right: parent.right
@@ -116,8 +116,8 @@ Item {
                         }
 
                         Item {
-                            height: AppThemes.topBarIconSize
                             width: 28
+                            height: AppThemes.topBarIconSize
 
                             Image {
                                 id: networkIcon
@@ -142,8 +142,8 @@ Item {
         Item {
             id: content
 
-            Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.fillHeight: true
         }
     }
 

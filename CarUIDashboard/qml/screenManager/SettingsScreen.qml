@@ -10,7 +10,7 @@ AppScreen {
     onActiveFocusChanged: {
         if(activeFocus) {
             settingsOptionsRect.state = "reanchored"
-//            settingsRect.state = "reanchored"
+            settingsRect.state = "reanchored"
         }
     }
 
@@ -21,12 +21,12 @@ AppScreen {
 
             Rectangle {
                 id: settingsOptionsRect
-                height: parent.height
                 width: parent.width * 0.35
+                height: parent.height
                 anchors.left: parent.left
                 anchors.leftMargin: parent.width / 2
 
-                color: "#1A1E2C"
+                color: AppThemes.settingsOptionsBackground
 
                 states: State {
                     name: "reanchored"
@@ -35,7 +35,6 @@ AppScreen {
                         target: settingsOptionsRect
                         anchors.left: parent.left
                     }
-
                     PropertyChanges {
                         target: settingsOptionsRect
                         anchors.leftMargin: 0
@@ -43,7 +42,7 @@ AppScreen {
                 }
 
                 transitions: Transition {
-                    AnchorAnimation { duration: 1000;}
+                    AnchorAnimation { duration: 1000; easing.type: Easing.InOutQuad;}
                 }
 
                 ListView {
@@ -70,50 +69,49 @@ AppScreen {
                 }
             }
 
-//            Rectangle {
-//                id: settingsRect
+            Rectangle {
+                id: settingsRect
 
-//                height: parent.height
-//                anchors.left: parent.left
-//                anchors.leftMargin: parent.width
-//                width: root.width - settingsOptionsRect.width
-//                color: "#202734"
+                width: root.width - settingsOptionsRect.width
+                height: parent.height
+                anchors.left: parent.left
+                anchors.leftMargin: parent.width
+                color: AppThemes.settingsBackground
 
-//                MouseArea {
-//                    anchors.fill: parent
-//                    onClicked: {
-//                        settingsRect.state = "reanchored"
-//                    }
-//                }
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        settingsRect.state = "reanchored"
+                    }
+                }
 
-//                states: State {
-//                    name: "reanchored"
+                states: State {
+                    name: "reanchored"
 
-//                    AnchorChanges {
-//                        target: settingsRect
-//                        anchors.left: parent.left
-//                    }
-//                    PropertyChanges {
-//                        target: settingsRect
-//                        anchors.leftMargin: settingsOptionsRect.width
-//                    }
-//                }
+                    AnchorChanges {
+                        target: settingsRect
+                        anchors.left: parent.left
+                    }
+                    PropertyChanges {
+                        target: settingsRect
+                        anchors.leftMargin: settingsOptionsRect.width
+                    }
+                }
 
-//                transitions: Transition {
-//                    AnchorAnimation { duration: 1100;}
-//                }
+                transitions: Transition {
+                    AnchorAnimation { duration: 1100; easing.type: Easing.InOutQuad }
+                }
 
-//                Item {
-//                    width: parent.width - AppThemes.primaryPadding
-//                    height: parent.height - AppThemes.primaryPadding
-//                    anchors.centerIn: parent
+                Item {
+                    width: parent.width - AppThemes.primaryPadding
+                    height: parent.height - AppThemes.primaryPadding
+                    anchors.centerIn: parent
 
-//                    QuickControlsScreen {
-//                        anchors.fill: parent
-//                    }
-//                }
-//            }
-
+                    QuickControlsScreen {
+                        anchors.fill: parent
+                    }
+                }
+            }
         }
     ]
 }

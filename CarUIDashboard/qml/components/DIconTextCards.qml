@@ -13,8 +13,8 @@ Rectangle {
     radius: AppThemes.primaryRadius
 
     ColumnLayout {
-        height: parent.height - (AppThemes.primarySpacing / 2)
         width: parent.width / 1.2
+        height: parent.height - (AppThemes.primarySpacing / 2)
         anchors.horizontalCenter: parent.horizontalCenter
 
         Item {
@@ -27,34 +27,34 @@ Rectangle {
                 spacing: 0
 
                 Rectangle {
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     radius: 2
                     color: "#747B88"
                 }
                 Rectangle {
-                    Layout.fillHeight: true
                     Layout.fillWidth: false
+                    Layout.fillHeight: true
                     Layout.preferredWidth: parent.width * 0.2
                     radius: 2
                     color: AppThemes.primaryClickedColor
                 }
                 Rectangle {
-                    Layout.fillHeight: true
                     Layout.fillWidth: false
+                    Layout.fillHeight: true
                     Layout.preferredWidth: parent.width * 0.1
                     radius: 2
                     color: "red"
                 }
                 Rectangle {
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     radius: 2
                     color: "#FBAF3E"
                 }
                 Rectangle {
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     radius: 2
                     color: AppThemes.primaryClickedColor
                 }
@@ -73,12 +73,12 @@ Rectangle {
                 id: repeater
 
                 DIconTextCard {
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     source: model.source
                     text1: model.text1
                     text2: model.text2
-                    text1FontSize: 12
+                    text1FontSize: AppThemes.smallFontSize
                     text2FontSize: AppThemes.primaryFontSize
                 }
             }

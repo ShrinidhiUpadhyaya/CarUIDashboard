@@ -70,5 +70,6 @@
         <file>qml/icons/mapNavigationSandTimerIcon.png</file>
         <file>qml/icons/mapNavigationLeftTurnIcon.png</file>
         <file>qml/components/singleComponents/DRect.qml</file>
+        <file>qml/components/DACComponent.qml</file>
     </qresource>
 </RCC>
