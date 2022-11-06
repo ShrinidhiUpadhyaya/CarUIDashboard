@@ -19,28 +19,28 @@ Item {
         id: bottomNavigationIconList
 
         ListElement {
-            source:"qrc:/qml/icons/bottomNavCarIcon.png"
-            selectedSource:"qrc:/qml/icons/bottomNavCarSelectedIcon.png"
+            source: "qrc:/qml/icons/bottomNavCarIcon.png"
+            selectedSource: "qrc:/qml/icons/bottomNavCarSelectedIcon.png"
         }
 
         ListElement {
-            source:"qrc:/qml/icons/bottomNavApplicationsIcon.png"
-            selectedSource:"qrc:/qml/icons/bottomNavApplicationsSelectedIcon.png"
+            source: "qrc:/qml/icons/bottomNavApplicationsIcon.png"
+            selectedSource: "qrc:/qml/icons/bottomNavApplicationsSelectedIcon.png"
         }
 
         ListElement {
-            source:"qrc:/qml/icons/bottomNavLocationIcon.png"
-            selectedSource:"qrc:/qml/icons/bottomNavLocationSelectedIcon.png"
+            source: "qrc:/qml/icons/bottomNavLocationIcon.png"
+            selectedSource: "qrc:/qml/icons/bottomNavLocationSelectedIcon.png"
         }
 
         ListElement {
-            source:"qrc:/qml/icons/bottomNavMobileIcon.png"
-            selectedSource:"qrc:/qml/icons/bottomNavMobileSelectedIcon.png"
+            source: "qrc:/qml/icons/bottomNavMobileIcon.png"
+            selectedSource: "qrc:/qml/icons/bottomNavMobileSelectedIcon.png"
         }
 
         ListElement {
-            source:"qrc:/qml/icons/bottomNavMusicIcon.png"
-            selectedSource:"qrc:/qml/icons/bottomNavMusicSelectedIcon.png"
+            source: "qrc:/qml/icons/bottomNavMusicIcon.png"
+            selectedSource: "qrc:/qml/icons/bottomNavMusicSelectedIcon.png"
         }
     }
 
@@ -48,40 +48,40 @@ Item {
         id: settingsIconList
 
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/quickControlsIcon.png"
-            text: "Quick Controls"
+            source: "qrc:/qml/icons/settingsIcon/quickControlsIcon.png"
+            text: qsTr("Quick Controls")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/lightsIcon.png"
-            text: "Lights"
+            source: "qrc:/qml/icons/settingsIcon/lightsIcon.png"
+            text: qsTr("Lights")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/drivingIcon.png"
-            text: "Driving"
+            source: "qrc:/qml/icons/settingsIcon/drivingIcon.png"
+            text: qsTr("Driving")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/autopilotIcon.png"
-            text: "Autopilot"
+            source: "qrc:/qml/icons/settingsIcon/autopilotIcon.png"
+            text: qsTr("Autopilot")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/safetySecurityIcon.png"
-            text: "Safety & Security"
+            source: "qrc:/qml/icons/settingsIcon/safetySecurityIcon.png"
+            text: qsTr("Safety & Security")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/displayIcon.png"
-            text: "Display"
+            source: "qrc:/qml/icons/settingsIcon/displayIcon.png"
+            text: qsTr("Display")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/serviceIcon.png"
-            text: "Service"
+            source: "qrc:/qml/icons/settingsIcon/serviceIcon.png"
+            text: qsTr("Service")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/bluetoothIcon.png"
-            text: "Bluetooth"
+            source: "qrc:/qml/icons/settingsIcon/bluetoothIcon.png"
+            text: qsTr("Bluetooth")
         }
         ListElement {
-            source:"qrc:/qml/icons/settingsIcon/userAccountIcon.png"
-            text: "User Account"
+            source: "qrc:/qml/icons/settingsIcon/userAccountIcon.png"
+            text: qsTr("User Account")
         }
     }
 
@@ -89,16 +89,16 @@ Item {
         id: quickControlsLightList
 
         ListElement {
-            text:"Off"
+            text: qsTr("Off")
         }
         ListElement {
-            text:"Parking"
+            text: qsTr("Parking")
         }
         ListElement {
-            text:"On"
+            text: qsTr("On")
         }
         ListElement {
-            text:"Auto"
+            text: qsTr("Auto")
         }
     }
 

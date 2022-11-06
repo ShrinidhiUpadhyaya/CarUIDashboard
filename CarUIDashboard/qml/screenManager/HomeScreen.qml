@@ -97,17 +97,29 @@ AppScreen {
                     Layout.preferredHeight: parent.height * 0.5
                     color: AppThemes.transparentColor
 
-                    Rectangle {
+                    DTextButton {
+                        width: AppThemes.primaryButtonSize * 2
+                        height: AppThemes.primaryButtonSize
+                        text: qsTr("Open")
+                        radius: AppThemes.primaryRadius * 2
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+
+                    Image {
                         width: parent.width / 2
                         height: parent.height * 0.6
-                        color: AppThemes.transparentColor
                         anchors.centerIn: parent
+                        source: AppThemes.setIconSource("mainCarImage2.png")
+                        mipmap: true
+                    }
 
-                        Image {
-                            anchors.fill: parent
-                            source: AppThemes.setIconSource("mainCarImage2.png")
-                            mipmap: true
-                        }
+                    DTextButton {
+                        width: AppThemes.primaryButtonSize * 2
+                        height: AppThemes.primaryButtonSize
+                        text: qsTr("Open")
+                        radius: AppThemes.primaryRadius * 2
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.right: parent.right
                     }
                 }
 

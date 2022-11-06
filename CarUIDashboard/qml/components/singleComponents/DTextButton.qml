@@ -7,6 +7,8 @@ import "../../components"
 DRect {
     id: root
 
+    property alias text: text.text
+
     property bool buttonEnabled: false
 
     width: parent.width
@@ -17,7 +19,8 @@ DRect {
     border.width: root.activeFocus ? AppThemes.activeBorderWidth : 0
 
     DText {
-        text: "Auto"
+        id: text
+
         anchors.centerIn: parent
         color: AppThemes.whiteColor
     }

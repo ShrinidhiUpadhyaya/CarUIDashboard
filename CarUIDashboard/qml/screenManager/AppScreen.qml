@@ -81,16 +81,26 @@ Item {
                     DText {
                         id: timeText
 
-                        text: "10:21 AM     "
+                        text:  time + "     "
                         font.pixelSize: AppThemes.smallFontSize
 
+                        property string time: Qt.formatDateTime(new Date(), "hh:mm:ss")
+
+                        Timer {
+                            running: true
+                            interval: 1000
+                            repeat: true
+                            onTriggered: {
+                                 parent.time = Qt.formatDateTime(new Date(), "hh:mm:ss");
+                            }
+                        }
                     }
 
                     DText {
                         id: tempText
 
                         anchors.left: timeText.right
-                        text: "-     " + "17 C"
+                        text: "-     " + "17 °C"
                         color: AppThemes.whiteColor
                         font.pixelSize: AppThemes.smallFontSize
 
@@ -106,8 +116,8 @@ Item {
                         spacing: AppThemes.primarySpacing
 
                         Item {
-                           width: AppThemes.topBarIconSize
-                           height: width
+                            width: AppThemes.topBarIconSize
+                            height: width
 
                             Image {
                                 anchors.fill: parent

@@ -37,6 +37,7 @@ DSettingScreen {
                             Layout.preferredHeight: AppThemes.primaryButtonSize
                             Layout.preferredWidth: parent.width * 0.15
                             Layout.alignment: Qt.AlignTop
+                            text: qsTr("Auto")
                         }
                     }
                 ]
