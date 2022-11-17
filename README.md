@@ -1,5 +1,9 @@
 # CarUIDashboard
 
+<p align="center">
+<img src="https://github.com/ShrinidhiUpadhyaya/CarUIDashboard/blob/main/CarUIDashboard/screenVideo.gif" />
+</p>
+
 **Inspiration/Credits:**
 * (https://dribbble.com/shots/18021625-Car-UI-Dashboard)
 
